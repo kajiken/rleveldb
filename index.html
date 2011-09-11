@@ -1,1 +1,52 @@
-My GitHub Page
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>kajiken.github.com</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="site-header">
+      <h1>rLevelDB</h1>
+      </header>
+      <section class="content">
+      <h2>Description</h2>
+      <pre>
+      Ruby extension for LevelDB
+      <a href="http://code.google.com/p/leveldb/">http://code.google.com/p/leveldb/</a>
+      </pre>
+      </section>
+      <section class="content">
+      <h2>Install</h2>
+      <pre>
+      $ git clone git://github.com/kajiken/rleveldb.git
+      $ cd rleveldb/rleveldb
+      $ ruby extconf.rb
+      </pre>
+      </section>
+      <section  class="content">
+      <h2>Usage</h2>
+      <span class="desc">sample ruby code.</span>
+      <pre>
+      require './../leveldb'
+      require 'pp'
+
+      db = LevelDB::DB.new
+
+      db.open "/tmp/testdb"
+
+      db.put "tokyo", "hogehgoe"
+
+      pp db.get "tokyo"
+
+      db.del "tokyo"
+
+      pp db.get "tokyo"
+
+      db.close 
+      </pre>
+      </section>
+    </div>
+  </body>
+</html>
